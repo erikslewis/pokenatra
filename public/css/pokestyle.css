@@ -14,9 +14,10 @@ a{
 h1{
   color: red;
   text-decoration: underline;
+  -webkit-text-stroke: 2px blue;
 }
 
-p, h2, h3 {
+p, h2, h3{
   color: red;
   text-shadow: rgb(35, 75, 180) 3px 3px 1px;
   -webkit-text-stroke: 2px blue;
@@ -25,8 +26,32 @@ p, h2, h3 {
   text-align: center;
 
 }
+h1{
+ width: 100px;
+ height: 100px;
+ background-color: red;
+ position: relative;
+ -webkit-animation: myfirst 5s linear 2s infinite alternate; /* Safari 4.0 - 8.0 */
+ animation: myfirst 5s linear 10s infinite alternate;
+}
 
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes myfirst {
+ 0%   {background-color:red; left:0px; top:0px;}
+ 25%  {background-color:yellow; left:200px; top:0px;}
+ 50%  {background-color:blue; left:200px; top:20px;}
+ 75%  {background-color:green; left:0px; top:20px;}
+ 100% {background-color:red; left:0px; top:0px;}
+}
 
+/* Standard syntax */
+@keyframes myfirst {
+ 0%   {background-color:red; left:0px; top:0px;}
+ 25%  {background-color:yellow; left:200px; top:0px;}
+ 50%  {background-color:blue; left:200px; top:20px;}
+ 75%  {background-color:green; left:0px; top:20px;}
+ 100% {background-color:red; left:0px; top:20px;}
+}
 body {
   background-image: url(../images/pokedex.png);
   background-attachment: fixed;
@@ -34,6 +59,7 @@ body {
   font-family: "Pokemon", monospace;
   letter-spacing: .25em;
   font-size: 200%;
+  background-color: blue;
 }
 
 a:hover {
@@ -45,7 +71,7 @@ a:hover {
   padding: 10px;
   width: 50%;
   margin: auto;
-  background-color: blue;
+  background-color: black;
   text-align: center;
   justify-content: center;
 }
@@ -68,7 +94,7 @@ a:hover {
 @keyframes pulse {
   0% {
     text-shadow: 4px 4px 3px rgba(255, 255, 255, .3);
-    background-color: blue;
+    background-color: yellow;
   }
   25% {
     text-shadow: 4px 4px 3px rgba(255, 0, 0, .3);
