@@ -9,6 +9,7 @@ a{
   -webkit-text-stroke: 2px blue;
   text-decoration: none;
   border-radius: 100px;
+
 }
 h1{
   color: red;
@@ -21,6 +22,7 @@ p, h2, h3 {
   -webkit-text-stroke: 2px blue;
   text-decoration: underline;
   border-radius: 100px;
+  text-align: center;
 
 }
 
@@ -36,7 +38,7 @@ body {
 
 a:hover {
   padding: 20px;
-  animation: pulse 1s infinite;
+  animation: pulse .5s infinite;
 }
 .containareon, h1 {
   box-sizing: border-box;
@@ -50,7 +52,7 @@ a:hover {
 
 .pokemon{
   min-width: 375px;
-  background-color: rgb(255, 255, 255);
+  background-color: black;
   padding: 10px;
   margin: 40px;
   box-sizing: border-box;
@@ -60,12 +62,13 @@ a:hover {
   border-left-color: rgba(255, 0, 0, .5);
   border-right-color: rgba(225, 225, 225, .5);
   border-bottom-color: rgba(225, 225, 225, .5);
+  text-align: center;
 }
 
 @keyframes pulse {
   0% {
     text-shadow: 4px 4px 3px rgba(255, 255, 255, .3);
-    background-color: rgba(0, 0, 0, .1);
+    background-color: blue;
   }
   25% {
     text-shadow: 4px 4px 3px rgba(255, 0, 0, .3);
